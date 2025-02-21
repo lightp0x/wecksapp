@@ -39,4 +39,4 @@ function generateExcuse() {
 document.getElementById('generate-btn').addEventListener('click', () => {
     const excuse = generateExcuse();
     document.getElementById('excuse').textContent = excuse;
-}); 
+});
