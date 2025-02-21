@@ -3,16 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel Rivals Häviön Selittäjä</title>
+    <title>Marvel Rivals Excuse Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Marvel Rivals Häviön Selittäjä</h1>
-        <div class="excuse-box">
-            <p id="excuse">Kootut selitykset</p>
+        <h1>Marvel Rivals Excuse Game</h1>
+        <div id="score">Pisteet: 0</div>
+        
+        <div class="game-area">
+            <div class="guess-section">
+                <h3>Valitse alku:</h3>
+                <select id="beginning-select">
+                    <!-- Täytetään JavaScriptillä -->
+                </select>
+            </div>
+            
+            <div class="guess-section">
+                <h3>Valitse keskiosa:</h3>
+                <select id="middle-select">
+                    <!-- Täytetään JavaScriptillä -->
+                </select>
+            </div>
+            
+            <div class="guess-section">
+                <h3>Valitse loppu:</h3>
+                <select id="end-select">
+                    <!-- Täytetään JavaScriptillä -->
+                </select>
+            </div>
+            
+            <button id="check-guess">Tarkista arvaus</button>
         </div>
-        <button id="generate-btn">Generoi Selitys</button>
+        
+        <div class="excuse-box">
+            <p id="excuse">Tee arvaus!</p>
+        </div>
+        
+        <button id="generate-btn">Generoi uusi tekosyy</button>
     </div>
     <script src="script.js"></script>
 </body>

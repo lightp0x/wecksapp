@@ -52,12 +52,27 @@ const excuseElements = {
     ]
 };
 
+let score = 0;
+let currentExcuse = {};
+
 function generateExcuse() {
-    const beginning = excuseElements.beginning[Math.floor(Math.random() * excuseElements.beginning.length)];
-    const middle = excuseElements.middle[Math.floor(Math.random() * excuseElements.middle.length)];
-    const end = excuseElements.end[Math.floor(Math.random() * excuseElements.end.length)];
+    // Generoi kaikki osat, mutta tallenna ne objektiin
+    currentExcuse = {
+        beginning: excuseElements.beginning[Math.floor(Math.random() * excuseElements.beginning.length)],
+        middle: excuseElements.middle[Math.floor(Math.random() * excuseElements.middle.length)],
+        end: excuseElements.end[Math.floor(Math.random() * excuseElements.end.length)]
+    };
     
-    return `${beginning} ${middle} ${end}`;
+    return `${currentExcuse.beginning} ${currentExcuse.middle} ${currentExcuse.end}`;
+}
+
+function guessExcusePart(part, playerGuess) {
+    if (currentExcuse[part] === playerGuess) {
+        score += 1;
+        document.getElementById('score').textContent = `Pisteet: ${score}`;
+        return true;
+    }
+    return false;
 }
 
 document.getElementById('generate-btn').addEventListener('click', () => {
