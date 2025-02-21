@@ -75,7 +75,52 @@ function guessExcusePart(part, playerGuess) {
     return false;
 }
 
+function populateSelects() {
+    const beginningSelect = document.getElementById('beginning-select');
+    const middleSelect = document.getElementById('middle-select');
+    const endSelect = document.getElementById('end-select');
+
+    // Tyhjennä ensin vanhat
+    beginningSelect.innerHTML = '';
+    middleSelect.innerHTML = '';
+    endSelect.innerHTML = '';
+
+    // Lisää vaihtoehdot jokaiseen valikkoon
+    excuseElements.beginning.forEach(item => {
+        beginningSelect.add(new Option(item, item));
+    });
+
+    excuseElements.middle.forEach(item => {
+        middleSelect.add(new Option(item, item));
+    });
+
+    excuseElements.end.forEach(item => {
+        endSelect.add(new Option(item, item));
+    });
+}
+
 document.getElementById('generate-btn').addEventListener('click', () => {
     const excuse = generateExcuse();
     document.getElementById('excuse').textContent = excuse;
+});
+
+document.getElementById('check-guess').addEventListener('click', () => {
+    const beginningGuess = document.getElementById('beginning-select').value;
+    const middleGuess = document.getElementById('middle-select').value;
+    const endGuess = document.getElementById('end-select').value;
+
+    if (guessExcusePart('beginning', beginningGuess)) {
+        alert('Alku oikein!');
+    }
+    if (guessExcusePart('middle', middleGuess)) {
+        alert('Keskiosa oikein!');
+    }
+    if (guessExcusePart('end', endGuess)) {
+        alert('Loppu oikein!');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    populateSelects();
+    generateExcuse(); // Generoi ensimmäinen tekosyy
 });
