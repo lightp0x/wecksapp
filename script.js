@@ -1,30 +1,30 @@
 const excuseElements = {
     beginning: [
-        "Valitettavasti johtuen",
-        "En voinut voittaa, koska",
-        "Häviö johtui siitä, että",
-        "Olisin kyllä voittanut, mutta",
-        "Et uskokkaan, mutta"
+        "Ei voi pärjätä kun",
+        "Ei vaa pärjää koska",
+        "Ihan mahdoton matsi kun",
+        "Miten tässä muka voittaa kun",
+        "Kuka tahansa häviäis kun"
     ],
     middle: [
-        "Iron Manin repulsorit",
-        "Hulkin thunderclapit",
-        "Doctor Strangen portaalit",
-        "Magneton metallin hallinta",
-        "Spider-Manin verkot",
-        "Black Pantherin vibranium-varusteet",
-        "Thorin Mjolnir",
-        "Wolverinen adamantium-kynnet"
+        "toi rotta Spiderman",
+        "se typerä Wolverine",
+        "se tuliäijä (Human Torch)",
+        "toi Iron Fist",
+        "toi meta-pelle",
+        "toi tryhard pelaaja",
+        "vastustajan broken hahmo",
+        "toi spam-kunkku"
     ],
     end: [
-        "eivät toimineet niin kuin piti lag-piikin takia.",
-        "olivat selvästi ylibufattuja tässä patchissa.",
-        "tarvitsevat ehdottomasti nerffiä seuraavassa päivityksessä.",
-        "olivat buggisia juuri tässä matsissa.",
-        "kärsivät serverin viiveestä.",
-        "eivät rekisteröineet osumia kunnolla.",
-        "olivat epäreiluja juuri minun hahmojani vastaan.",
-        "olivat aivan rikki tässä pelissä."
+        "on ihan järjettömän OP.",
+        "spammaa samaa comboo.",
+        "käyttää vaan broken movesetiä.",
+        "pelaa noin tyhmästi.",
+        "ei osaa pelata ku yhtä hahmoa.",
+        "on niin helppo pelata.",
+        "tarvii pikanerf patchin.",
+        "on ihan skill issue."
     ]
 };
 
